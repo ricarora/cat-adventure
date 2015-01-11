@@ -1,5 +1,13 @@
 // Write a cat model HERE!
 
+function Cat(name, update_point) {
+  this.name = name;
+  this.update_point = update_point;
+  this.getDescription = function(){
+    return this.name + " has " + this.update_point;
+  };
+}
+
 var Room = function (new_name, new_description, new_exits, new_points) {
   this.name = new_name;
   this.description = new_description;
@@ -14,7 +22,7 @@ var Room = function (new_name, new_description, new_exits, new_points) {
 // Begin fixture data!
 //
 var kitchen = new Room(
-  "Kitchen", 
+  "Kitchen",
   "A nice roomy kitchen. Not very safe. There may be dogs nearby.",
   ["Living Room", "Dining Room"],
   0
